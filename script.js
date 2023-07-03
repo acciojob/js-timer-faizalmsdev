@@ -1,14 +1,29 @@
-const players = ["John", "Bob", "Alice", "Poppy"];
+// Get the current date
+var currentDate = new Date();
 
-const person = {
-  name: "John Doe",
-  age: 80,
-};
+// Get the day (1-31)
+var day = currentDate.getDate();
 
-// Write your code here, make sure the name of variables is exactly same as mentioned in the problem statement
+// Get the month (0-11)
+var month = currentDate.getMonth();
 
-window.players = players;
-window.person = person;
-window.team = team;
-window.team1 = team1;
-window.cap1 = cap1;
+// Get the year (four digits)
+var year = currentDate.getFullYear();
+
+// Get the day (1-31)
+var hrs = currentDate.getHours();
+
+// Get the month (0-11)
+var minutes = currentDate.getMinutes();
+
+// Get the year (four digits)
+var sec = currentDate.getSeconds();
+
+const date = `${day}/${month}/${year}`;
+console.log(date);
+const time = `${hrs}:${minutes}:${sec}`;
+console.log(time);
+
+const timer = document.getElementById('timer');
+
+timer.textContent = `${date},${time}`;
